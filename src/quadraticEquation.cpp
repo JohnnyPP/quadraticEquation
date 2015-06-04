@@ -16,6 +16,7 @@ int main() {
 	Solver sol;
 	sol.GetCoefficients();
 	sol.PrintCoefficients();
+	sol.Solve();
 
 	return 0;
 }
