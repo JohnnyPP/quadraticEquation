@@ -11,7 +11,6 @@
 Solver::Solver()
 {
 	a = 0, b = 0, c = 0;
-
 }
 
 Solver::~Solver()
@@ -19,7 +18,7 @@ Solver::~Solver()
 	std::cout << "\nProgram terminated" << std::endl;
 }
 
-void Solver::getCoefficients()
+void Solver::GetCoefficients()
 {
 	std::cout << "Please type coefficient a: " << std::endl;
 	std::cin>>a;
@@ -29,7 +28,12 @@ void Solver::getCoefficients()
 	std::cin>>c;
 }
 
-void Solver::printCoefficients()
+void Solver::PrintCoefficients()
 {
 	std::cout << "a = " << a << ", b = " << b << ", c = " << c;
+}
+
+double Solver::Discriminant()
+{
+	return b*b-4*a*c;
 }

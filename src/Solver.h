@@ -11,12 +11,16 @@
 class Solver
 {
 public:
-	float a,b,c;
 
 	Solver();
 	virtual ~Solver();
-	void getCoefficients();
-	void printCoefficients();
+	void GetCoefficients();
+	void PrintCoefficients();
+	void Solve();
+	double Discriminant();
+private:
+
+	double a,b,c;
 };
 
 #endif /* SOLVER_H_ */

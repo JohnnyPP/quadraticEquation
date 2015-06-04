@@ -14,8 +14,8 @@ using namespace std;
 int main() {
 
 	Solver sol;
-	sol.getCoefficients();
-	sol.printCoefficients();
+	sol.GetCoefficients();
+	sol.PrintCoefficients();
 
 	return 0;
 }
