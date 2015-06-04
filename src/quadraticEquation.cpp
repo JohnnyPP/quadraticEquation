@@ -12,6 +12,10 @@
 using namespace std;
 
 int main() {
-	cout << "Search file" << endl; // prints Search file
+
+	Solver sol;
+	sol.getCoefficients();
+	sol.printCoefficients();
+
 	return 0;
 }

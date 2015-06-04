@@ -11,8 +11,12 @@
 class Solver
 {
 public:
+	float a,b,c;
+
 	Solver();
 	virtual ~Solver();
+	void getCoefficients();
+	void printCoefficients();
 };
 
 #endif /* SOLVER_H_ */
