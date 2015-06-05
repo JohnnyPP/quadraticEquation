@@ -1,19 +1,20 @@
-//============================================================================
+//===================================================================================
 // Name        : quadraticEquation.cpp
-// Author      : KK
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
+// Author      : JohnnyP
+// Version     : 1.0
+// Copyright   : GPL
+// Description : This program solves the quadratic equation of the form ax² + bx + c
+//===================================================================================
 
 #include <iostream>
 #include "Solver.h"
 
 using namespace std;
 
-int main() {
-
+int main()
+{
 	Solver sol;
+
 	sol.GetCoefficients();
 	sol.PrintCoefficients();
 	sol.Solve();
