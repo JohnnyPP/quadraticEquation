@@ -13,18 +13,12 @@ class Solver
 {
 public:
 
-	/*struct Roots
-	{
-	    double x1;
-	    double x2;
-	};*/
-
 	typedef struct Roots
 	{
-		double x1_real;
-		double x2_real;
-		double x1_imaginary;
-		double x2_imaginary;
+		double x1Real;
+		double x2Real;
+		double x1Imaginary;
+		double x2Imaginary;
 	} roots;
 
 

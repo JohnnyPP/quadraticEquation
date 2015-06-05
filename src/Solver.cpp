@@ -46,21 +46,21 @@ double Solver::RealSolution()
 
 Solver::roots Solver::RealRoots(double discriminant)
 {
-	Solver::roots roots_real;
-	roots_real.x1_real = (-b-sqrt(discriminant))/(2*a);
-	roots_real.x2_real = (-b+sqrt(discriminant))/(2*a);
+	Solver::roots rootsReal;
+	rootsReal.x1Real = (-b-sqrt(discriminant))/(2*a);
+	rootsReal.x2Real = (-b+sqrt(discriminant))/(2*a);
 
-	return roots_real;
+	return rootsReal;
 }
 
 Solver::roots Solver::ComplexRoots(double discriminant)
 {
-	Solver::roots roots_complex;
-	roots_complex.x1_real=-b/2*a;
-	roots_complex.x1_imaginary=(sqrt(-discriminant))/(2*a);
-	roots_complex.x2_imaginary=-(sqrt(-discriminant))/(2*a);
+	Solver::roots rootsComplex;
+	rootsComplex.x1Real=-b/2*a;
+	rootsComplex.x1Imaginary=(sqrt(-discriminant))/(2*a);
+	rootsComplex.x2Imaginary=-(sqrt(-discriminant))/(2*a);
 
-	return roots_complex;
+	return rootsComplex;
 }
 
 void Solver::Solve()
@@ -70,14 +70,14 @@ void Solver::Solve()
 	if(delta>0)
 	{
 		std::cout << std::showpos << "\nThe equation " << a << "x²" << b << "x" << c << std::endl; // showpos prints +/- signs
-		std::cout << std::noshowpos << "Has two real roots x1 = " << RealRoots(delta).x1_real << " and x2 = " <<RealRoots(delta).x2_real; // http://www.cplusplus.com/reference/ios/showpos/
+		std::cout << std::noshowpos << "Has two real roots x1 = " << RealRoots(delta).x1Real << " and x2 = " <<RealRoots(delta).x2Real; // http://www.cplusplus.com/reference/ios/showpos/
 
 	}
 	else if (delta<0)
 	{
 		std::cout << std::showpos << "\nThe equation " << a << "x²" << b << "x" << c << std::endl;
-		std::cout << std::showpos << "Has two imaginary roots z1 = " << ComplexRoots(delta).x1_real << ComplexRoots(delta).x1_imaginary << "i";
-		std::cout << std::showpos << " and z2 = " << ComplexRoots(delta).x1_real << ComplexRoots(delta).x2_imaginary << "i";
+		std::cout << std::showpos << "Has two imaginary roots z1 = " << ComplexRoots(delta).x1Real << ComplexRoots(delta).x1Imaginary << "i";
+		std::cout << std::showpos << " and z2 = " << ComplexRoots(delta).x1Real << ComplexRoots(delta).x2Imaginary << "i";
 	}
 	else /*delta == 0*/
 	{
